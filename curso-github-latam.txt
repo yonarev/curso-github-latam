@@ -442,13 +442,14 @@ USANDO GIT
         CONTENIDO 
             ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC/1akPxY0cxjZ8DTPuRwVSeZeusigIfwB8pgOPqnp2b/U8VfWATwziKWaN4/BV1jLTwHw00lmFJ0MM5aTlD6yeqfQkRsv+KIei/XQ8Cuk4dpFvW8H2T3gd56Cy8Si53Gd1C4H8VytbdHte2xkb24GvbYVLluIjtyoTJ337K6I+r1/kb4QWLnD3jUewicpLRs5jfCbLELq3TSsFol6UER5ykN6zr0ZEMZ98WwQ8GB3hC8YR54LA7UvIw6gQQvXfQjk7d/PON0VKPWoy6yklM53jOwsaRAM6r07d5ZYsKLLowCGQYH3o1UAByC4Bq9KLn71yVo2ZzyoQdNpdmTAPTSowp/z2X3xRLSdL1oss2uuRSQRL09KoEdFWauAwpVuviednyc+uKsHaF/AgcVw4uV+7OhGZMN+1M+b7U0Ucq/3LT+r8h0S9V3MWOLWkCayTL9JbRqQMmM9Rsg/wyUa09+aIakdKPKhr04FU4foRYyaE37CKDikVna4/UfYqjykt8GpizLTKtzbJjBFy83Is5xENK7ANp6WTD0ki0rXtorKsR2VQIFL1allVFbVHDLaI16SLfj43bU8Ha9NxNurTvUNJ582RjsZeEr4urm/YcmdVbOthmkT4Bk29N7VSEreCq24/SBV8BCay24zqQhqF2X9Eu3qtF2pK49H+oBHlgwprBw== creacion claves pp
     LEVANTANDO AGENTE 
-        CLICK DERECHO 
-            OPEN GIT BASH HERE    
-        eval "$(ssh-agent -s)"
-            jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES (master)
-                $ eval "$(ssh-agent -s)"
-                Agent pid 586
-        PROBLEMAS 
+        EXPLORER / CLICK DERECHO / OPEN GIT BASH HERE   
+        LEVANTAR EL AGENTE     
+            eval "$(ssh-agent -s)"
+                jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES (master)
+                    $ eval "$(ssh-agent -s)"
+                    Agent pid 586
+        
+        PROBLEMA resuelto
             1. Verificar y habilitar el servicio OpenSSH Authentication Agent:
             Abrir Servicios:
                 Presiona la tecla de Windows + R para abrir el cuadro de diálogo Ejecutar.
@@ -466,6 +467,10 @@ USANDO GIT
             RESUELTO 
                 CLICK DERECHO 
                     OPEN GIT BASH HERE   
+
+        AGREGAR AL AGENTE DE SEGUIMIENTO 
+            $ ssh-add ~/.ssh/id_rsa
+
 
     AL REINICIAR 
         EXPLORER EN CARPETA
@@ -487,3 +492,84 @@ USANDO GIT
         Cambios en los archivo sde carpeta
             
             git add .    
+
+            git commit -m "2do commit"
+                jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES (master)
+                    $ git commit -m "2do commit"
+                    [master 62dcd27] 2do commit
+                    1 file changed, 186 insertions(+), 7 deletions(-)
+            
+        ir por la clave 
+            C:\Users\notebook\.ssh\id_rsa.pub vscode
+
+                ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC/1akPxY0cxjZ8DTPuRwVSeZeusigIfwB8pgOPqnp2b/U8VfWATwziKWaN4/BV1jLTwHw00lmFJ0MM5aTlD6yeqfQkRsv+KIei/XQ8Cuk4dpFvW8H2T3gd56Cy8Si53Gd1C4H8VytbdHte2xkb24GvbYVLluIjtyoTJ337K6I+r1/kb4QWLnD3jUewicpLRs5jfCbLELq3TSsFol6UER5ykN6zr0ZEMZ98WwQ8GB3hC8YR54LA7UvIw6gQQvXfQjk7d/PON0VKPWoy6yklM53jOwsaRAM6r07d5ZYsKLLowCGQYH3o1UAByC4Bq9KLn71yVo2ZzyoQdNpdmTAPTSowp/z2X3xRLSdL1oss2uuRSQRL09KoEdFWauAwpVuviednyc+uKsHaF/AgcVw4uV+7OhGZMN+1M+b7U0Ucq/3LT+r8h0S9V3MWOLWkCayTL9JbRqQMmM9Rsg/wyUa09+aIakdKPKhr04FU4foRYyaE37CKDikVna4/UfYqjykt8GpizLTKtzbJjBFy83Is5xENK7ANp6WTD0ki0rXtorKsR2VQIFL1allVFbVHDLaI16SLfj43bU8Ha9NxNurTvUNJ582RjsZeEr4urm/YcmdVbOthmkT4Bk29N7VSEreCq24/SBV8BCay24zqQhqF2X9Eu3qtF2pK49H+oBHlgwprBw== creacion claves pp
+        cfg githubb
+            settings / SSSH and GPG keys /new SSH key 
+            title es identificador 
+                curso-github-latam
+            type 
+                autentication key
+            pegar key 
+                ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC/1akPxY0cxjZ8DTPuRwVSeZeusigIfwB8pgOPqnp2b/U8VfWATwziKWaN4/BV1jLTwHw00lmFJ0MM5aTlD6yeqfQkRsv+KIei/XQ8Cuk4dpFvW8H2T3gd56Cy8Si53Gd1C4H8VytbdHte2xkb24GvbYVLluIjtyoTJ337K6I+r1/kb4QWLnD3jUewicpLRs5jfCbLELq3TSsFol6UER5ykN6zr0ZEMZ98WwQ8GB3hC8YR54LA7UvIw6gQQvXfQjk7d/PON0VKPWoy6yklM53jOwsaRAM6r07d5ZYsKLLowCGQYH3o1UAByC4Bq9KLn71yVo2ZzyoQdNpdmTAPTSowp/z2X3xRLSdL1oss2uuRSQRL09KoEdFWauAwpVuviednyc+uKsHaF/AgcVw4uV+7OhGZMN+1M+b7U0Ucq/3LT+r8h0S9V3MWOLWkCayTL9JbRqQMmM9Rsg/wyUa09+aIakdKPKhr04FU4foRYyaE37CKDikVna4/UfYqjykt8GpizLTKtzbJjBFy83Is5xENK7ANp6WTD0ki0rXtorKsR2VQIFL1allVFbVHDLaI16SLfj43bU8Ha9NxNurTvUNJ582RjsZeEr4urm/YcmdVbOthmkT4Bk29N7VSEreCq24/SBV8BCay24zqQhqF2X9Eu3qtF2pK49H+oBHlgwprBw== creacion claves pp
+
+            QUEDA EN GITHUB 
+                SSH keys
+                    This is a list of SSH keys associated with your account. Remove any keys that you do not recognize.
+
+                    Authentication keys
+                    SSH
+                    curso-github-latam
+                    SHA256:OAh2QiKziAQeCOxXTgUA/JjdwG/FBZKSw96LO9+Zj7I
+                    Added on Oct 11, 2024
+                    Never used — Read/write
+Subiendo a GitHub (Parte I)
+    enlazar desde mi pc a la plataforma en la red
+        github / new repository
+            repository name
+                curso-github-latam
+
+            descripcion
+
+            publico
+
+            boton crear repositorio
+        ir por conjunto de comandos y preparar
+            …or create a new repository on the command line
+                echo "# curso-github-latam" >> README.md
+                git init
+                git add README.md //solo esta agregando readme
+                git commit -m "3er commit"
+                git branch -M main
+                git remote add origin https://github.com/yonarev/curso-github-latam.git
+                git push -u origin main
+
+        EJECUTAR LOS COMANDOS EN GIT BASH 
+            PROBLEMAS CON LA CLAVE
+                Cambiar el origen de tu repositorio a SSH:
+                    Cambia la URL del remoto en Git para usar SSH en lugar de HTTPS:
+
+                git remote set-url origin git@github.com:yonarev/curso-github-latam.git
+
+                git push -u origin main
+                    ahora va a pedir frase secreta "ultimo tunel"
+
+                    jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES (main)
+                        $ git push origin main
+                        Enter passphrase for key '/c/Users/notebook/.ssh/id_rsa':
+                        Enumerating objects: 13, done.
+                        Counting objects: 100% (13/13), done.
+                        Delta compression using up to 2 threads
+                        Compressing objects: 100% (11/11), done.
+                        Writing objects: 100% (13/13), 65.38 MiB | 526.00 KiB/s, done.
+                        Total 13 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+                        remote: Resolving deltas: 100% (3/3), done.
+                        remote: warning: See https://gh.io/lfs for more information.
+                        remote: warning: File software/Git-2.47.0-64-bit.exe is 65.59 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
+                        remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+                        To github.com:yonarev/curso-github-latam.git
+                        * [new branch]      main -> main
+
+    SUBIENDO TODO 
+        git add .
+        git commit -m "4to commit"
+        git push -u origin main
