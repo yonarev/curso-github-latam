@@ -287,9 +287,9 @@ Generando la clave SSH
             en el archivo .ssh 
                 almacena toda la info de llaves pub y privadas
 
-                ssh-keygen -t rsa -b 4096 -c "clave pp"
+                ssh-keygen -t rsa -b 4096 -C "creacion claves pp"
 
-                -c "": 
+                -C "": 
                     Esta opción se utiliza para agregar un comentario a la clave
 
                 -b 4096: 
@@ -302,9 +302,188 @@ Generando la clave SSH
                     Indica que se va a generar una clave de tipo RSA. 
                     RSA es un algoritmo de cifrado asimétrico 
                     muy utilizado y considerado seguro.
+    Una vez que hayas generado tu par de claves SSH 
+    con una frase de contraseña segura, 
+    estás listo para el siguiente paso: 
+        agregar tu clave pública a tu plataforma de alojamiento 
+        (como GitHub, GitLab o Bitbucket).
+    
+    Localizar la clave pública:
+
+        Por defecto, la clave pública se guarda en un 
+        archivo con extensión .pub 
+        en el directorio .ssh 
+        de tu directorio home. 
+        Por ejemplo: ~/.ssh/id_rsa.pub.
+
+                ARCHIVO
+            id_rsa.pub
+        RUTA
+            C:\Users\notebook\.ssh
+        CONTENIDO 
+            ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC/1akPxY0cxjZ8DTPuRwVSeZeusigIfwB8pgOPqnp2b/U8VfWATwziKWaN4/BV1jLTwHw00lmFJ0MM5aTlD6yeqfQkRsv+KIei/XQ8Cuk4dpFvW8H2T3gd56Cy8Si53Gd1C4H8VytbdHte2xkb24GvbYVLluIjtyoTJ337K6I+r1/kb4QWLnD3jUewicpLRs5jfCbLELq3TSsFol6UER5ykN6zr0ZEMZ98WwQ8GB3hC8YR54LA7UvIw6gQQvXfQjk7d/PON0VKPWoy6yklM53jOwsaRAM6r07d5ZYsKLLowCGQYH3o1UAByC4Bq9KLn71yVo2ZzyoQdNpdmTAPTSowp/z2X3xRLSdL1oss2uuRSQRL09KoEdFWauAwpVuviednyc+uKsHaF/AgcVw4uV+7OhGZMN+1M+b7U0Ucq/3LT+r8h0S9V3MWOLWkCayTL9JbRqQMmM9Rsg/wyUa09+aIakdKPKhr04FU4foRYyaE37CKDikVna4/UfYqjykt8GpizLTKtzbJjBFy83Is5xENK7ANp6WTD0ki0rXtorKsR2VQIFL1allVFbVHDLaI16SLfj43bU8Ha9NxNurTvUNJ582RjsZeEr4urm/YcmdVbOthmkT4Bk29N7VSEreCq24/SBV8BCay24zqQhqF2X9Eu3qtF2pK49H+oBHlgwprBw== creacion claves pp
+
+
+    DECIRLE AL AGENTE QUE ADMINISTRA CLAVES 
+         que se ejecute
+         que se levante como servidor 
+
+            Comando: eval "$(ssh-agent -s)"
+
+                ¿Qué hace este comando?
+
+                ssh-agent: Este es un programa que se ejecuta en segundo plano y almacena temporalmente tus claves SSH en la memoria. Esto evita tener que escribir tu frase de contraseña cada vez que quieras usar una clave SSH.
+                -s: Esta opción le indica a ssh-agent que inicie en modo de salida, es decir, que imprima las variables de entorno necesarias para configurar tu shell para usar el agente SSH.
+                $(): Esta sintaxis en Bash se utiliza para ejecutar el comando dentro de los paréntesis y reemplazarlo por su salida. En este caso, ejecuta ssh-agent -s y captura su salida.
+                eval: Este comando toma la salida de ssh-agent -s (que son variables de entorno) y la ejecuta en el shell actual. Esto configura tu shell para usar el agente SSH.
+                En resumen:
+
+                Este comando inicia el agente SSH en segundo plano y configura tu shell para que lo utilice. De esta manera, cuando ejecutes comandos SSH, el agente buscará las claves SSH almacenadas en la memoria en lugar de pedirte la frase de contraseña cada vez.
+
+
+
 USANDO GIT 
-    git config --global user.name "yonarev"
-    git config --global user.email jorgeveravidela@gmail.com 
-    git config --list  
-    git init
+    SOLO UNA VEZ
+        git config --global user.name "yonarev"
+        git config --global user.email jorgeveravidela@gmail.com 
+        git config --list  
+        
+        git init crea un nuevo repositorio: 
+        Este comando se utiliza una sola vez para inicializar 
+        un nuevo repositorio Git en un directorio.
+            
+            git init
+
     git add .
+    git commit -m "Primer commit: aprendiendo git"
+        [master (root-commit) 4f1eea7] Primer commit: aprendiendo git
+        4 files changed, 310 insertions(+)
+        create mode 100644 control-de-versiones.png
+        create mode 100644 curso-github-latam.txt
+        create mode 100644 proceso git.png
+        create mode 100644 software/Git-2.47.0-64-bit.exe
+
+            Has realizado los pasos correctos para configurar 
+            tu nombre de usuario de Git a nivel global 
+            y para inicializar un repositorio local con tus archivos.
+
+                Veamos un resumen de lo que has hecho:
+
+                Configuración:
+
+                git config --global user.name "yonarev": Estableciste tu nombre de usuario de Git como "yonarev".
+                git config --global user.email "jorgeveravidela@gmail.com": Estableciste tu dirección de correo electrónico de Git como "jorgeveravidela@gmail.com".
+                git config --list: Este comando probablemente te mostró la configuración actual de Git, incluyendo tu nombre de usuario y correo electrónico.
+                Creación del repositorio local:
+
+                git init: Este comando inicializó un repositorio Git en la carpeta actual. Esto crea un directorio oculto llamado .git donde se almacena toda la información del repositorio.
+                Añadir archivos y realizar commit:
+
+                git add .: Este comando añadió todos los archivos y subcarpetas de la carpeta actual al seguimiento de Git.
+                git commit -m "Primer commit: aprendiendo git": Este comando creó el primer commit (versión) de tu repositorio con el mensaje "Primer commit: aprendiendo git".
+                Ahora tienes un repositorio local con tu código y su historial de cambios.
+
+                Para tener una copia de seguridad en línea o compartir tu código con otros, necesitas configurarlo con un repositorio remoto en un servicio como GitHub, GitLab o Bitbucket.
+        git log 
+            commit 4f1eea7f56d19581b8024d2ac680e384c8139e0c (HEAD -> master)
+            Author: yonarev <jorgeveravidela@gmail.com>
+            Date:   Fri Oct 11 09:34:04 2024 -0300
+
+                Primer commit: aprendiendo git
+        
+        La creación de la clave pública y privada SSH normalmente 
+                se realiza antes de configurar un repositorio remoto.
+        ssh-keygen -t rsa -b 4096 -C "creacion claves pp"
+            Generating public/private rsa key pair.
+            Enter file in which to save the key (C:\Users\notebook/.ssh/id_rsa): 
+            Enter passphrase (empty for no passphrase): 
+            Enter same passphrase again: 
+            Your identification has been saved in C:\Users\notebook/.ssh/id_rsa.
+            Your public key has been saved in C:\Users\notebook/.ssh/id_rsa.pub.
+            The key fingerprint is:
+            SHA256:OAh2QiKziAQeCOxXTgUA/JjdwG/FBZKSw96LO9+Zj7I creacion claves pp
+            The key's randomart image is:
+            +---[RSA 4096]----+
+            |%+=.oo=oo.       |
+            |BB.B +.o         |
+            |=.X % .          |
+            | = O B .         |
+            |  . + + S        |
+            |   . . .         |
+            |    .            |
+            |   o .. +        |
+            |    oEo=..       |
+            +----[SHA256]-----+
+
+                pide passphrase: frase de seguridad 
+                             "ultimo tunel"
+
+    viendo directorio local git 
+        cd . git
+        ls 
+            Mode                 LastWriteTime         Length Name
+            ----                 -------------         ------ ----
+            d-----        10/11/2024   9:32 AM                hooks
+            d-----        10/11/2024   9:32 AM                info
+            d-----        10/11/2024   9:34 AM                logs
+            d-----        10/11/2024   9:34 AM                objects
+            d-----        10/11/2024   9:32 AM                refs
+            -a----        10/11/2024   9:34 AM             31 COMMIT_EDITMSG
+            -a----        10/11/2024   9:32 AM            130 config
+            -a----        10/11/2024   9:32 AM             73 description
+            -a----        10/11/2024   9:32 AM             23 HEAD
+            -a----        10/11/2024   9:34 AM            450 index
+
+    accediendo a archivo con claves ssh 
+        ARCHIVO
+            id_rsa.pub
+        RUTA
+            C:\Users\notebook\.ssh
+        CONTENIDO 
+            ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC/1akPxY0cxjZ8DTPuRwVSeZeusigIfwB8pgOPqnp2b/U8VfWATwziKWaN4/BV1jLTwHw00lmFJ0MM5aTlD6yeqfQkRsv+KIei/XQ8Cuk4dpFvW8H2T3gd56Cy8Si53Gd1C4H8VytbdHte2xkb24GvbYVLluIjtyoTJ337K6I+r1/kb4QWLnD3jUewicpLRs5jfCbLELq3TSsFol6UER5ykN6zr0ZEMZ98WwQ8GB3hC8YR54LA7UvIw6gQQvXfQjk7d/PON0VKPWoy6yklM53jOwsaRAM6r07d5ZYsKLLowCGQYH3o1UAByC4Bq9KLn71yVo2ZzyoQdNpdmTAPTSowp/z2X3xRLSdL1oss2uuRSQRL09KoEdFWauAwpVuviednyc+uKsHaF/AgcVw4uV+7OhGZMN+1M+b7U0Ucq/3LT+r8h0S9V3MWOLWkCayTL9JbRqQMmM9Rsg/wyUa09+aIakdKPKhr04FU4foRYyaE37CKDikVna4/UfYqjykt8GpizLTKtzbJjBFy83Is5xENK7ANp6WTD0ki0rXtorKsR2VQIFL1allVFbVHDLaI16SLfj43bU8Ha9NxNurTvUNJ582RjsZeEr4urm/YcmdVbOthmkT4Bk29N7VSEreCq24/SBV8BCay24zqQhqF2X9Eu3qtF2pK49H+oBHlgwprBw== creacion claves pp
+    LEVANTANDO AGENTE 
+        CLICK DERECHO 
+            OPEN GIT BASH HERE    
+        eval "$(ssh-agent -s)"
+            jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES (master)
+                $ eval "$(ssh-agent -s)"
+                Agent pid 586
+        PROBLEMAS 
+            1. Verificar y habilitar el servicio OpenSSH Authentication Agent:
+            Abrir Servicios:
+                Presiona la tecla de Windows + R para abrir el cuadro de diálogo Ejecutar.
+                Escribe services.msc y presiona Enter.
+            Buscar el servicio:
+                Busca el servicio "OpenSSH Authentication Agent".
+            Habilitar y iniciar:
+                Haz doble clic en el servicio.
+                En la pestaña "General", asegúrate de que el 
+                "Tipo de inicio" esté configurado en "Automático".
+                Haz clic en "Iniciar" para iniciar el servicio.
+
+            CMD 
+                Start-Service ssh-agent
+            RESUELTO 
+                CLICK DERECHO 
+                    OPEN GIT BASH HERE   
+
+    AL REINICIAR 
+        EXPLORER EN CARPETA
+            CLICK DERECHO 
+                OPEN GIT BASH HERE   
+        Iniciar el agente SSH
+            
+            eval "$(ssh-agent -s)"
+        
+        Agregar tu clave privada (opcional):
+            Si ya tienes una clave privada generada, puedes agregarla al agente SSH con el comando:
+            
+            ssh-add ~/.ssh/id_rsa
+                jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES (master)
+                    $ ssh-add ~/.ssh/id_rsa
+                    Enter passphrase for /c/Users/notebook/.ssh/id_rsa:
+                    Identity added: /c/Users/notebook/.ssh/id_rsa (creacion claves pp)
+
+        Cambios en los archivo sde carpeta
+            
+            git add .    
