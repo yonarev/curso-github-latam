@@ -340,8 +340,6 @@ Generando la clave SSH
 
                 Este comando inicia el agente SSH en segundo plano y configura tu shell para que lo utilice. De esta manera, cuando ejecutes comandos SSH, el agente buscará las claves SSH almacenadas en la memoria en lugar de pedirte la frase de contraseña cada vez.
 
-
-
 USANDO GIT 
     SOLO UNA VEZ
         git config --global user.name "yonarev"
@@ -579,4 +577,270 @@ Subiendo a GitHub (Parte II)
         git add .
         git commit -m "5to commit"
         git push -u origin main
+
+    ESTADO DE GIT 
+        jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES (main)
+            $ git status
+                On branch main
+                Your branch is up to date with 'origin/main'.
+
+                Changes not staged for commit:
+                (use "git add <file>..." to update what will be committed)
+                (use "git restore <file>..." to discard changes in working directory)
+                        modified:   curso-github-latam.txt
+
+                Untracked files:
+                (use "git add <file>..." to include in what will be committed)
+                        cfg-git-1.png
+                        cfg-git-2.png
+                        comandos-git.png
+                        comandos-linux.png
+
+                no changes added to commit (use "git add" and/or "git commit -a")
+    CAMBIOS DE ESTADO 
+        jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES (main)
+            $ git log
+                commit e9e14b59cd7bd7750478ba01403138cf5ede94c8 (HEAD -> main, origin/main)
+                Author: yonarev <jorgeveravidela@gmail.com>
+                Date:   Fri Oct 11 15:59:49 2024 -0300
+
+                    5to commit
+
+                commit e864511d2b95b76c0eb5d82ec48ff9c3d00f56b0
+                Author: yonarev <jorgeveravidela@gmail.com>
+                Date:   Fri Oct 11 15:44:25 2024 -0300
+
+                    4to commit
+
+                commit 348fb0f76f9d30f3ee410564f830c8d6f415e2f4
+                Author: yonarev <jorgeveravidela@gmail.com>
+                Date:   Fri Oct 11 15:07:56 2024 -0300
+
+                    3er commit
+
+                commit 62dcd270e3bdab26350f3fa5ba32d56688ccf021
+                Author: yonarev <jorgeveravidela@gmail.com>
+                Date:   Fri Oct 11 14:38:13 2024 -0300
+
+                    2do commit
+
+                commit 4f1eea7f56d19581b8024d2ac680e384c8139e0c
+                Author: yonarev <jorgeveravidela@gmail.com>
+                Date:   Fri Oct 11 09:34:04 2024 -0300
+
+                    Primer commit: aprendiendo git
+                
+
+Guía de estudio - GitHub 
+        Comandos básicos de Git
+        Comandos de configuración
+            git config: Configura opciones generales de Git, como tu nombre de usuario y correo electrónico. Estos datos se asociarán a tus commits y se mostrarán en el historial de cambios.
+            Ejemplo: git config --global user.name "Tu Nombre"
+            --global: Aplica la configuración a nivel global, afectando a todos tus repositorios.
+        Comandos de inicio
+            git init: Inicializa un nuevo repositorio de Git en el directorio actual. Esto crea una carpeta oculta llamada .git que almacena toda la información del repositorio.
+            Ejemplo: git init mi-proyecto
+        Comandos de trabajo con archivos
+            git add: Agrega los cambios de los archivos modificados al área de preparación (staging area). Estos cambios serán parte del próximo commit.
+            Ejemplo: git add archivo1.txt archivo2.py
+            git commit: Crea un nuevo commit con los cambios que están en el área de preparación. Cada commit es una instantánea del proyecto en un momento dado.
+            Ejemplo: git commit -m "Mensaje descriptivo del commit"
+        Comandos de registro
+            git status: Muestra el estado actual del repositorio, indicando qué archivos han sido modificados, cuáles están listos para ser comprometidos y cuáles están siendo ignorados.
+            git log: Muestra un registro de todos los commits realizados en el repositorio, desde el más reciente hasta el más antiguo. Puedes personalizar la salida con opciones como --oneline para una vista más concisa o --graph para visualizar la historia como un gráfico.
+            Ejemplo: git log --oneline
+        Otros comandos útiles
+            git branch: Gestiona las ramas de tu proyecto. Puedes crear nuevas ramas, listar las ramas existentes y cambiar entre ellas.
+            git merge: Combina los cambios de una rama en otra.
+            git checkout: Cambia a una rama existente o crea una nueva a partir de un commit específico.
+            git remote: Gestiona las conexiones a repositorios remotos.
+            git pull: Obtiene los cambios más recientes de un repositorio remoto y los fusiona en tu rama local.
+            git push: Envía los cambios locales a un repositorio remoto.
+        Detalles adicionales:
+            Área de preparación (staging area): Un espacio temporal donde se almacenan los cambios antes de ser comprometidos.
+            Commit: Una instantánea del proyecto en un momento dado. Cada commit tiene un identificador único (hash).
+            Rama: Una línea de desarrollo independiente. Puedes crear múltiples ramas para trabajar en diferentes características sin afectar la rama principal.
+            Repositorio remoto: Una copia del repositorio en un servidor (como GitHub, GitLab o Bitbucket).    
+
+actividades 
+    Actividad 2: Agregando de archivos
+
+        Crea una carpeta llamada actividad-con-git
+        Dentro de la carpeta crea el archivo index.html
+        Inicializa git con git init
+        Agrega el archivo index.html con git add
+        Verifica que haya sido agregado con git status
+        Confirma el cambio con git commit -m "Mi primer commit"
+        Revisa con git log que el commit se haya realizado correctamente.
+        Revisa con git status que el estado del archivo haya cambiado.
+        Si en git log el autor (author) 
+        aparece como unknown se debe a que te saltaste 
+        o te equivocaste un paso en el capítulo configurando git de esta guía.
     
+    Actividad 3: Agregando y borrando archivos
+
+        En esta actividad, aprenderás a agregar 
+        y borrar archivos en un repositorio de Git. 
+        Primero, crearás un nuevo repositorio 
+        y agregarás dos archivos al índice de Git mediante los comandos 
+            git add y git commit. 
+        Luego, borrarás uno de los archivos 
+        y crearás otro commit con el mensaje "Borrado archivo1.txt". 
+        Finalmente, revisarás el registro de commits usando el comando git log.
+
+        Crea un nuevo repositorio de Git en tu computadora usando el comando git init.
+        Crea un archivo llamado archivo1.txt y escribe algo de texto en él.
+        Agrega el archivo al índice de Git usando el comando git add.
+        Crea un commit con el mensaje "Agregado archivo1.txt" usando el comando git commit.
+        Crea otro archivo llamado archivo2.txt y escribe algo de texto en él.
+        Agrega el archivo al índice de Git usando el comando git add.
+        Crea un commit con el mensaje "Agregado archivo2.txt" usando el comando git commit.
+        Borra el archivo archivo1.txt usando el comando rm archivo1.txt.
+        Agrega el cambio al índice de Git usando el comando git add.
+        Crea un commit con el mensaje "Borrado archivo1.txt" usando el comando git commit.
+        Revisa el registro de commits usando el comando git log.
+
+
+    Actividad 4: Realizando nuestro primer fork
+        Fork de un proyecto
+
+            Entendamos un fork como una bifurcación del proyecto, 
+            esto es tomar el original y poder realizar todas las 
+            modificaciones que queramos para nuestro propósito.
+
+        Ingresa a: https://github.com/gsanchezd/fdsw-github
+        Haz clic en la opción fork.
+        Serás redirigido a la bifurcación del proyecto en tu cuenta, es muy importante que no saltes este paso o luego no podrás subir cambios.
+        Haz clic en la opción code.
+        Descarga el proyecto utilizando git clone.
+        Selecciona la opción ssh.
+        La opción https ya no funciona en github.
+        Copia la dirección.
+        En el terminal ingresa a tu carpeta de proyectos con cd proyectos.
+        Si no tienes puedes crear una con mkdir proyectos.
+        Descarga el proyecto utilizando git clone dirección_copiada cv2.
+        <Un proyecto clonado viene con la carpeta .git incluida, no se requiere hacer git init>
+        
+        Carga la carpeta cv2 descargada en el editor de código.
+        Cambia el header utilizando el editor de código.
+        Agrega los cambios utilizando git add nombre_archivo
+        Confirma los cambios utilizando git commit -m "primeros cambios"
+        Sube los cambios utilizando git push origin main.
+        Revisa en github que los cambios se hayan subido haciendo clic en el archivo modificado.
+        La fecha del último commit es también un buen indicador. 
+
+Estados de un archivo en Git:
+
+        El diagrama muestra cuatro estados principales por los que puede pasar un archivo en un repositorio Git:
+
+        Untracked (No rastreado): 
+            El archivo existe en tu directorio de trabajo, 
+            pero Git aún no lo está siguiendo. 
+            Es decir, no forma parte del control de versiones.
+        Unmodified (Sin modificaciones): 
+            El archivo está siendo rastreado por Git 
+            y su contenido coincide con la última versión guardada en el repositorio.
+        Modified (Modificado): 
+            El archivo ha sido modificado desde la última vez que se guardó 
+            en el repositorio. Estos cambios aún no se han registrado.
+        Staged (Preparado): 
+            Los cambios realizados en el archivo han sido marcados 
+            para ser incluidos en el próximo commit. 
+            Es decir, están listos para ser guardados de forma permanente en el repositorio.
+
+        Flujo de trabajo básico:
+
+        Untracked -> Modified: 
+            Cuando creas un nuevo archivo o modificas uno existente, 
+            este pasa del estado "Untracked" al estado "Modified".
+            Git detecta que hay cambios que no han sido registrados.
+        Modified -> Staged: 
+            Para incluir los cambios en el próximo commit, 
+            utilizas el comando git add. 
+            Esto mueve el archivo del estado "Modified" al estado "Staged".
+        Staged -> Committed: 
+            Con el comando git commit, se crea un nuevo commit 
+            en el repositorio, incluyendo todos los archivos que
+            están en el estado "Staged". 
+            Estos archivos pasan entonces al estado "Unmodified", 
+            ya que su contenido coincide con la última versión guardada.
+        Modified -> Removed: 
+            Si deseas eliminar un archivo del repositorio, 
+            puedes usar el comando 
+                git rm. 
+            
+            Esto marca el archivo para ser eliminado en el próximo commit.
+
+        Consideraciones:
+
+            Un archivo no trackeado pasa a staged (en preparación) 
+                vía git add. 
+                a. Al principio de un proyecto, 
+                cuando recién hacemos git init, todos los archivos 
+                están en estado no trackeado. 
+                b. Al agregar un archivo con git add pasa a staged. 
+                c. Al confirmar (commit) pasa a modificado.
+            Un archivo no modificado pasa a modificado cuando lo editamos. 
+                a. Luego confirmamos los cambios con git commit 
+                    y con esto vuelve a un estado no confirmado. 
+                b. Podemos ver el estado de los archivos con git status. 
+                c. Podemos ver todas las confirmaciones hechas con git log.
+
+Subiendo cambios con git push
+    En la actividad anterior 
+    utilizamos el comando git push, 
+    este se utiliza para subir los cambios al repositorio remoto. A continuación lo explicaremos.
+    Analizando git push
+        Las partes del comando git push son:
+        
+        git push remote branch
+
+    Donde:
+        remote es el punto de destino, este fue configurado automáticamente 
+        cuando hicimos un clon del proyecto, esta dirección también recibió 
+        un alias llamado origin, el cual es un estándar.
+
+        branch es la rama del proyecto, 
+            las ramas son un elemento importante de Git de lo cual 
+            no hemos profundizado todavía. La rama por defecto en github es main.
+        Por lo tanto, al escribir 
+            
+            git push origin main 
+            
+            como lo hicimos en la actividad, 
+        estamos diciendo a git que suba el código al punto remoto configurado, 
+        el cual es nuestro repositorio en github y a la rama principal de este repositorio.
+
+    Por ahora, todas las actualizaciones cambios las realizaremos utilizando git push origin main.
+
+Resumen
+
+    GitHub es un gestor de repositorios remotos, lo que quiere decir que 
+    podemos almacenar una copia de nuestro código en sus servidores. 
+    Así podemos trabajar colaborativamente y respaldar nuestro trabajo.
+
+    Las llaves, la pública y privada, son un medio por el cual podemos identificar 
+    nuestro equipo con un servidor o página específica, 
+    incluso sin tener que ingresar una contraseña.
+
+    Fork es una acción que creará una bifurcación del repositorio, 
+    en otras palabras realizará una copia del proyecto completo 
+    en nuestra propia cuenta de GitHub.
+
+    Podemos descargar un proyecto desde GitHub utilizando 
+
+        git clone dirección_del_proyecto [nombre_del_proyecto]. 
+
+        Los corchetes indican que el argumento es opcional, 
+        es decir, podemos omitir el nombre del proyecto 
+        y en ese caso el nombre utilizado será el de github.
+
+    Para subir los cambios al repositorio remoto debemos 
+    utilizar el comando 
+
+        git push origin main.
+
+EJECUTANDO GIT para el respaldo diario de este contenido 
+    git add .
+    git commit -m "6to commit"
+    git push -u origin main
