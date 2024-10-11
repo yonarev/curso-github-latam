@@ -630,7 +630,6 @@ Subiendo a GitHub (Parte II)
 
                     Primer commit: aprendiendo git
                 
-
 Guía de estudio - GitHub 
         Comandos básicos de Git
         Comandos de configuración
@@ -843,4 +842,166 @@ Resumen
 EJECUTANDO GIT para el respaldo diario de este contenido 
     git add .
     git commit -m "6to commit"
+    git push -u origin main
+
+        jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES (main)
+            $     git add .
+
+        jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES (main)
+            $     git commit -m "6to commit"
+            
+            [main 2d5edb7] 6to commit
+            7 files changed, 267 insertions(+), 3 deletions(-)
+            create mode 100644 cfg-git-1.png
+            create mode 100644 cfg-git-2.png
+            create mode 100644 comandos-git.png
+            create mode 100644 comandos-linux.png
+            create mode 100644 flujo-git-real.webp
+            create mode 100644 flujo-git.png
+
+        jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES (main)
+            $     git push -u origin main
+            
+            Enter passphrase for key '/c/Users/notebook/.ssh/id_rsa':
+            Enumerating objects: 11, done.
+            Counting objects: 100% (11/11), done.
+            Delta compression using up to 2 threads
+            Compressing objects: 100% (9/9), done.
+            Writing objects: 100% (9/9), 297.68 KiB | 1.34 MiB/s, done.
+            Total 9 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+            remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+            To github.com:yonarev/curso-github-latam.git
+            e9e14b5..2d5edb7  main -> main
+            branch 'main' set up to track 'origin/main'.
+
+        jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES (main)
+            $ git status
+            
+            On branch main
+            Your branch is up to date with 'origin/main'.
+
+            Changes not staged for commit:
+            (use "git add <file>..." to update what will be committed)
+            (use "git restore <file>..." to discard changes in working directory)
+                    modified:   curso-github-latam.txt
+
+            no changes added to commit (use "git add" and/or "git commit -a")
+
+        jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES (main)
+            $ git log
+
+            commit 2d5edb7ef59dcdd13cb5e6c6dddc920c1cf16f04 (HEAD -> main, origin/main)
+            Author: yonarev <jorgeveravidela@gmail.com>
+            Date:   Fri Oct 11 16:50:51 2024 -0300
+
+                6to commit
+
+            commit e9e14b59cd7bd7750478ba01403138cf5ede94c8
+            Author: yonarev <jorgeveravidela@gmail.com>
+            Date:   Fri Oct 11 15:59:49 2024 -0300
+
+                5to commit
+
+            commit e864511d2b95b76c0eb5d82ec48ff9c3d00f56b0
+            Author: yonarev <jorgeveravidela@gmail.com>
+            Date:   Fri Oct 11 15:44:25 2024 -0300
+
+                4to commit
+
+            commit 348fb0f76f9d30f3ee410564f830c8d6f415e2f4
+            Author: yonarev <jorgeveravidela@gmail.com>
+            Date:   Fri Oct 11 15:07:56 2024 -0300
+
+                3er commit
+
+            commit 62dcd270e3bdab26350f3fa5ba32d56688ccf021
+            Author: yonarev <jorgeveravidela@gmail.com>
+            Date:   Fri Oct 11 14:38:13 2024 -0300
+
+                2do commit
+
+            commit 4f1eea7f56d19581b8024d2ac680e384c8139e0c
+            Author: yonarev <jorgeveravidela@gmail.com>
+            Date:   Fri Oct 11 09:34:04 2024 -0300
+
+                Primer commit: aprendiendo git
+
+PRUEBA Quiz - Terminal, Git y GitHub
+    De acuerdo a lo aprendido, ¿Cuál es el comando para listar los archivos NO ocultos que estén en un directorio?
+
+        Seleccione solamente LA MEJOR respuesta
+
+        A
+        cd
+
+        B
+       ƒ ls
+
+        C
+        ls -a
+
+
+        Confirmar
+        Esta respuesta es correcta.
+            El comando ls significa list, este nos permite listar todos los elementos de un directorio que tengan permiso de visualización.
+    
+                ¿A qué corresponde la siguiente definición: “Es un comando que nos permite crear un directorio”?
+
+            Seleccione solamente LA MEJOR respuesta
+
+            A
+            touch
+
+            B
+            ƒ mkdir
+
+            Esta respuesta es correcta.
+            El comando mkdir significa make directory, este nos habilita la opción de generar directorios.
+
+    ¿A qué corresponde la siguiente definición: “Es un comando que nos sirve para inicializar los servicios de git en un directorio”?
+
+            Seleccione solamente LA MEJOR respuesta
+
+            A
+            ƒ git init
+
+            B
+            git push
+
+            C
+            git commit
+
+            Esta respuesta es correcta.
+                git push: enviar los cambios realizados al destino en que se encuentre el repositorio.
+                git commit: permite generar o guardar los cambios efectuados y además incorporar una breve descripción de dichos cambios.
+                git init: inicializa los servicios de git por lo que habilita el control de versiones en un directorio.
+
+    A partir de lo aprendido, 
+        ¿Cómo se define o interpreta el comando git push origin main?
+
+        Seleccione solamente LA MEJOR respuesta
+
+        A
+        Enviar los cambios de manera local.
+
+        B
+        Enviar los cambios en una rama que no es la principal.
+
+        C
+        ƒ Enviar los cambios a la rama principal. 
+
+        Esta respuesta es correcta.
+            El comando git push origin main envía los cambios a nuestra rama principal.
+            
+            Has completado Quiz - Terminal, Git y GitHub
+            Su resultado
+            100%
+
+AQUI VAMOS 
+    https://cursos.desafiolatam.com/courses/take/taller-git-github/downloads/48906601-desafio-github
+    Desafío - GitHub.pdf
+
+EJECUTANDO GIT para el respaldo diario de este contenido 
+    git add .
+    git commit -m "7to commit"
     git push -u origin main
