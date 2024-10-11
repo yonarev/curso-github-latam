@@ -1,0 +1,310 @@
+Bases de GIT, GITHUB
+    https://cursos.desafiolatam.com/courses/take/taller-git-github/texts/48906546-en-que-consiste-el-curso
+        Descripción
+
+        En este curso aprenderás a controlar versiones, 
+        esto en específico sobre una página web, 
+        en donde veremos en específico trabajar sobre la plataforma Github.
+
+        Unidades de aprendizaje
+
+        Terminal, Git y GitHub: 
+            identificar el proceso de creación de un repositorio remoto 
+            en GitHub para controlar las versiones de un proyecto 
+            y  publicar la página web utilizando GitHub Pages.
+        Trabajo colaborativo y GitHub Pages: 
+            comprender el desarrollo colaborativo de un proyecto con Git.
+
+
+        Plataformas y software
+
+            Firefox
+          ☼  Visual Studio code (https://code.visualstudio.com/)
+          ☼  Git Bash (en caso de Windows)
+          ☼  Terminal (en caso de Linux y Mac)
+            Git (https://git-scm.com/downloads)
+            GitHub / GitHub Pages (https://github.com/)
+            Xcode (en caso de MAC para instalar y actualizar GIT) 
+                    (https://imageoptim.com/changelog.html)
+        que es git hub 
+            Es una red social de código.
+            En github podemos 
+                descargar millones de proyectos, 
+                compartir nuestro código 
+                y trabajar en equipo.
+        ¿Qué necesitamos?
+            Terminal: para ejecutar comandos
+
+                El terminal es una poderosa herramienta 
+                donde podemos utilizar líneas de comandos 
+                para navegar por archivos y directorios. 
+                Al mismo tiempo, se utiliza para interactuar 
+                con programas que no tienen interfaz gráfica.
+                ctrl+alt+t /linux 
+                win+r+cdm /win
+            Git: Para controlar versiones
+            Github: Para subir y descargar proyectos
+
+        Qué es Git?
+
+            Imagina que estás construyendo una casa. Cada vez que agregas una nueva habitación o modificas una existente, querrás tener un registro de esos cambios, ¿verdad? Git funciona de manera similar, pero en lugar de una casa, estamos hablando de tu código. Git te permite:
+
+            Guardar versiones de tu código: Como si tomaras una foto de tu casa en cada etapa de la construcción.
+            Comparar cambios: Ver qué ha cambiado entre una versión y otra.
+            Deshacer cambios: Si cometes un error, puedes volver a una versión anterior.
+            Colaborar con otros: Trabajar en equipo de forma más eficiente.
+            ¿Por qué es importante Git?
+
+            Organización: Mantén tu código limpio y ordenado.
+            Seguridad: Evita perder tu trabajo por errores accidentales.
+            Colaboración: Trabaja en equipo de forma más efectiva.
+            Profesionalismo: Es una habilidad muy valorada en el mundo del desarrollo.
+            Primeros pasos: instalando Git
+        descarga
+            Visita la página oficial de Git: https://git-scm.com/
+            Descarga el instalador: Busca la opción "64-bit Git for Windows Setup.exe" y haz clic en ella.
+            Sigue las instrucciones: El instalador te guiará a través del proceso.  
+
+            https://git-scm.com/downloads
+            https://git-scm.com/downloads/win
+                64-bit Git for Windows Setup.
+
+        INSTALACION 
+            sia a todo 
+        EJECUCION 
+            launch git bash        
+    Árbol de directorios y comandos iniciales
+        vscode
+        ctl+ñ -> consola y  terminal 
+        ctrl+shit+ñ -nuevo terminal
+
+        WINDOWS SUBSISTEM LINUX PARA VSCODE
+            WSL 
+            ejecutar en cmd adminsitrador y reiniciar
+                dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
+            
+            ms sotore
+                INSTALAR WSL UBUNTU
+                    pwd 
+                    ls 
+                    cd 
+                    cd .. 
+                    cd ~
+                    ls -a h 
+                    ls -l
+                    ls -l | grep
+
+    Comandos para crear carpetas y archivos
+        mkdir DIRECTORIO 
+        touch CREARCHIVO   
+    Introducción a Git 
+        Git es un sistema de control de versiones ampliamente utilizado en el desarrollo.
+
+Git
+  Llevar registro de los cambios realizados
+  Recuperar versiones anteriores de nuestro código
+  Recuperar archivos borrados
+  Gestionar cambios realizados por otros colaboradores del proyecto
+                    
+    Configurando Git  (una sola vez en el equipo)
+        cfg
+
+            Configuración del user y el email
+
+            Para configurar nuestro usuario en git, tenemos que hacerlo una sola vez en nuestro computador.
+
+            Bash
+            git config --global user.name "Tu Nombre"
+            git config --global user.email tucorreo@mail.com                  
+        verificacion
+            verificamos los valores ingresados
+
+            Bash
+            git config --list
+
+            Si ves los valores que ingresaste en
+
+            user.name=Nombre Apellido
+            user.email=micorreo@mail.com
+            la respuesta es porque lo lograste.
+            Con la letra q puedes salir de la interfaz.
+
+    Inicializando Git
+        Uso básico de Git
+
+        Con Git configurado, nuestro siguiente paso será escribir 
+        en la carpeta de nuestro último desafío lo siguiente:
+
+        Bash
+            git init
+
+
+        Con ls -a podemos verificar que se creó una carpeta 
+        .git que guarda toda la información de las versiones.
+    agregar to2 los archivos al control de versiones 
+        En un proyecto nuevo, todos los archivos están en 
+        estado untracked (o sea git no revisa si se modifican o no), 
+        con git add pasamos un estado de untracked a tracked.
+
+        Luego, cuando modificamos un archivo, 
+        pasa de estado no-modificado a modificado, 
+        donde para agregar los cambios tenemos que volver 
+        a utilizar git add.
+        
+        git add .
+    registrar los cambios 
+        git commit -m "estado inicial"  
+        (retorna una respuesta)
+    revisando modificaciones de los archivos
+        git status
+        (retorna una respuesta)
+        si hay cambios lo indica
+    reguardando cambios
+        git add .
+    regisstrando cambios 
+        git commit -m "cambios realizados"
+        (retorna una respuesta)
+Git log
+    https://cursos.desafiolatam.com/courses/take/taller-git-github/lessons/48906594-git-log
+    presenta Estado total de commits del proyecto
+    
+resumen proceso de cambios 
+        resumiendo el uso básico de git add:
+
+        1. Estado inicial:
+
+            Tenemos un archivo llamado index.html 
+            que aún no está siendo rastreado por Git (estado untracked). 
+            Esto significa que Git no está al tanto de los cambios que 
+            se realicen en este archivo.
+        2. Agregando el archivo al seguimiento:
+
+            Ejecutamos el comando git add index.html.
+            Con este comando, le indicamos a Git que 
+            comience a rastrear los cambios que se realicen 
+            en el archivo index.html. 
+            El archivo pasa a estar en estado tracked.
+        3. Realizando el primer commit:
+
+            Ejecutamos el comando git commit -m "index".
+            Este comando crea una instantánea de los archivos 
+            que están siendo rastreados 
+            (en este caso, solo index.html) 
+            y la guarda en el historial de versiones de Git. 
+            El mensaje "index" es un comentario que describe 
+            los cambios realizados en esta versión.
+        4. Editando el archivo:
+
+            Realizamos cambios en el archivo index.html.
+        5. Agregando los cambios y realizando un nuevo commit:
+
+            Volvemos a ejecutar git add index.html para indicar 
+            a Git que los cambios realizados en el archivo deben 
+            ser incluidos en el siguiente commit.
+            Luego, ejecutamos git commit -m "cambios" 
+            para crear una nueva versión del archivo 
+            con los cambios realizados, y agregarla 
+            al historial de versiones.
+
+    En resumen:
+
+        git add 
+            se utiliza para marcar los archivos que queremos 
+            que Git comience a rastrear o para indicar que se han 
+            realizado cambios en archivos que ya están siendo rastreados.
+
+        git commit 
+            se utiliza para crear una nueva versión de los archivos 
+            que han sido modificados y agregados al seguimiento. 
+            Cada commit es como una instantánea del proyecto en un momento dado.
+            
+        ¿Por qué es importante usar git add y git commit?
+
+            Control de versiones: 
+                Permite mantener un historial de todos 
+                los cambios realizados en un proyecto, 
+                lo que facilita volver a versiones anteriores 
+                si es necesario.
+            Colaboración: 
+                Facilita el trabajo en equipo, ya que varios 
+                desarrolladores pueden trabajar en el mismo 
+                proyecto de forma simultánea y luego combinar sus cambios.
+            Seguridad: 
+                Actúa como una copia de seguridad de tu proyecto, 
+                ya que puedes recuperar archivos perdidos o dañados.
+            En pocas palabras: 
+                git add prepara los archivos para ser guardados 
+                en el historial de versiones, 
+                y git commit guarda esos cambios de forma permanente.
+        
+        ejemplo
+        git add index.html  //trackeado
+        git commit -m "cambios en index.html" //guarda cambios 
+        edicion del archivo 
+        git commit -m "nuevos cambios en index.html" //guarda cambios 
+
+Introducción a GitHub
+    Red social que permite almacenar codigos en plataforma compartidos 
+    1- registrarse 
+        https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home
+    2- iniciar sesion
+        https://github.com/login
+            login
+                jorgeveravidela@gmail.com 
+                freeMirrorMonkey 
+            direccion
+                https://github.com/yonarev
+            nombre 
+                yonarev
+            repositorios 
+                https://github.com/yonarev?tab=repositories
+Generando la clave SSH
+    llaves publicas 
+    llaves privadas
+
+    ¿Qué es una clave SSH?
+        segure shell encriptado permite conexion remota segura
+
+        Imagina una llave que te permite acceder a tu casa. 
+        En el mundo digital, las claves SSH cumplen una función similar, 
+        pero te permiten acceder a tus repositorios remoto en GitHub de forma segura.
+
+        ¿Qué son las llaves pública y privada?
+
+        Llave pública: 
+            Es como una tarjeta de presentación digital. 
+            La compartes con otros (como GitHub) 
+            y les permites verificar tu identidad.
+        Llave privada: 
+            Es tu llave personal y secreta.
+            Solo tú debes conocerla. 
+            Es la que te permite demostrar que eres 
+            quien dices ser cuando intentas acceder a tus repositorios.
+        ls -la 
+            muestra todos los arhivos
+                publicos y 
+                privados (los privados tienen punto ejem .ssh) 
+            en el archivo .ssh 
+                almacena toda la info de llaves pub y privadas
+
+                ssh-keygen -t rsa -b 4096 -c "clave pp"
+
+                -c "": 
+                    Esta opción se utiliza para agregar un comentario a la clave
+
+                -b 4096: 
+                    Especifica el tamaño de la clave en bits. 
+                    Un tamaño de 4096 bits es considerado seguro 
+                    para la mayoría de las aplicaciones. 
+                    Cuanto mayor sea el número, más segura será la clave, 
+                    pero también tomará más tiempo generar.
+                -t rsa: 
+                    Indica que se va a generar una clave de tipo RSA. 
+                    RSA es un algoritmo de cifrado asimétrico 
+                    muy utilizado y considerado seguro.
+USANDO GIT 
+    git config --global user.name "yonarev"
+    git config --global user.email jorgeveravidela@gmail.com 
+    git config --list  
+    git init
+    git add .
