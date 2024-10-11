@@ -573,3 +573,10 @@ Subiendo a GitHub (Parte I)
         git add .
         git commit -m "4to commit"
         git push -u origin main
+Subiendo a GitHub (Parte II)
+    subiendo al hacer cambios 
+    creamos index.html
+        git add .
+        git commit -m "5to commit"
+        git push -u origin main
+    
