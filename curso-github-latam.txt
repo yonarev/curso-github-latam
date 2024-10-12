@@ -1355,22 +1355,38 @@ PRUEBA Quiz - Terminal, Git y GitHub
             Su resultado
             100%
 
-AQUI VAMOS 
-    https://cursos.desafiolatam.com/courses/take/taller-git-github/downloads/48906601-desafio-github
-        Desafío - GitHub.pdf
 
 EJECUTANDO GIT para el respaldo diario de este contenido 
     git add .
     git commit -m "7to commit"
     git push -u origin main
         ok
+
 Utilizando servicios de GitHub Pages //como portafolio para sitios estaticos
     Entorno estático: 
         GitHub Pages proporciona un entorno de alojamiento simple y estático. 
         No incluye un servidor web con soporte para lenguajes de programación 
         del lado del servidor como PHP.
         https://cursos.desafiolatam.com/courses/take/taller-git-github/lessons/48906602-utilizando-servicios-de-github-pages
+
+    en github activar pages 
+        setting/pages
+            Branch
+                GitHub Pages is currently disabled. 
+                Select a source below to enable GitHub Pages for this repository. 
+                Learn more about configuring the publishing source for your site.
+
+                click none / main
+                dejar root y save
+                actualizar  
+                y aparece el link 
+                    Your site is live at https://yonarev.github.io/curso-github-latam/
+                    Last deployed by @yonarev yonarev 1 minute ago
+                    al hacer click en el link 
+                        presenta la web
+
 EJECUTANDO GIT para el respaldo diario de este contenido 
+
     git add .
         PROBLEMA 
             Advertencia: 
@@ -1408,4 +1424,81 @@ EJECUTANDO GIT para el respaldo diario de este contenido
 
     git add .
     git commit -m "8vo commit"
+    git push -u origin main
+
+Trabajo colaborativo
+    al trabajar en equipo el administrador u otros colaboradores 
+    pueden haber hecho cambios
+
+    descarga (baja) los cambios del repositorio remoto
+
+        git pull origin main:
+
+    Este es el comando básico para actualizar tu repositorio local.
+
+        git pull: Este comando combina dos operaciones: git fetch (para descargar los cambios del repositorio remoto) y git merge (para integrar esos cambios en tu rama local).
+        origin: Se refiere al nombre que se le suele dar al repositorio remoto desde el cual estás descargando los cambios.
+        main: Es el nombre de la rama en el repositorio remoto que deseas actualizar. Generalmente, main es la rama principal.
+
+    Otras ramas:
+
+    Si estás trabajando en una rama diferente a main, 
+    simplemente reemplaza main por el nombre de tu rama en el comando. 
+    Por ejemplo, si estás en la rama feature-nueva-funcionalidad, 
+    ejecutarías: 
+    
+        git pull origin feature-nueva-funcionalidad.
+
+EXAMEN // Quiz - Trabajo colaborativo y GitHub Pages 
+    Según lo aprendido, ¿Qué realiza el comando git pull origin main?
+
+        Seleccione solamente LA MEJOR respuesta
+
+        A
+        Envía los cambios a un repositorio remoto.
+    
+        B
+        ƒ Baja los cambios de un repositorio remoto.
+
+        Esta respuesta es correcta.
+        El comando git pull origin main baja los cambios de un repositorio remoto.
+
+    A partir de lo aprendido, ¿Qué ejecuta el comando git log?
+
+        Seleccione solamente LA MEJOR respuesta
+
+        A
+        ƒ Muestra los commits de manera cronológica en un repositorio.
+
+        B
+        Muestra los cambios realizados por usuarios que forman parte de un repositorio.
+
+        Esta respuesta es correcta.
+        El comando git log nos muestra de manera cronológica el historial de commits.
+
+    A partir de lo aprendido, ¿Qué realiza el comando git status?
+
+        Seleccione solamente LA MEJOR respuesta
+
+        A
+        Muestra el estado actual del repositorio, esto incluye archivos modificados y sin seguimiento.
+
+        B
+        Muestra los commits cronológicamente en un repositorio.
+
+        C
+        Configura las opciones de git.
+
+        Esta respuesta es correcta.
+        El comando git status nos permite conocer el estado del repositorio donde podemos ver los archivos con seguimiento y sin seguimiento de git.
+    
+    Has completado Quiz - Trabajo colaborativo y GitHub Pages
+        Su resultado
+            100%
+CERTIFICADO 
+    https://cursos.desafiolatam.com/certificates/4geecu73ap
+
+ULTIMO BCKP EN GIT
+    git add .
+    git commit -m "Ultimo commit"
     git push -u origin main
