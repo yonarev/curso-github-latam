@@ -702,32 +702,344 @@ actividades
 
     Actividad 4: Realizando nuestro primer fork
         Fork de un proyecto
+            ESTA EN /proyectos/fdsw-github
 
             Entendamos un fork como una bifurcación del proyecto, 
             esto es tomar el original y poder realizar todas las 
             modificaciones que queramos para nuestro propósito.
 
         Ingresa a: https://github.com/gsanchezd/fdsw-github
-        Haz clic en la opción fork.
-        Serás redirigido a la bifurcación del proyecto en tu cuenta, es muy importante que no saltes este paso o luego no podrás subir cambios.
-        Haz clic en la opción code.
-        Descarga el proyecto utilizando git clone.
-        Selecciona la opción ssh.
-        La opción https ya no funciona en github.
-        Copia la dirección.
-        En el terminal ingresa a tu carpeta de proyectos con cd proyectos.
-        Si no tienes puedes crear una con mkdir proyectos.
-        Descarga el proyecto utilizando git clone dirección_copiada cv2.
+        ƒ Haz clic en la opción fork.
+            Serás redirigido a la bifurcación del proyecto en tu cuenta, 
+            es muy importante que no saltes este paso o luego no podrás subir cambios.
+                yonarev/fdsw-github
+
+                Create a new fork
+                    A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project. View existing forks.
+                    Required fields are marked with an asterisk (*).
+                    Repository owner and name
+                    Owner
+                    *
+                    /
+                    Repository name
+                    *
+                    fdsw-github
+                    fdsw-github is available.
+                    By default, forks are named the same as their upstream repository. You can customize the name to distinguish it further.
+                    Description (optional)
+                    FORK de jorge vera videla NIk: yonarev
+
+                    Copy the main branch only
+                    Contribute back to gsanchezd/fdsw-github by adding your own branch. Learn more.
+                    You are creating a fork in your personal account.
+
+                                Loading
+                        Forking gsanchezd/fdsw-github
+                        It should only take a few seconds.
+
+                        CREADO
+                        https://github.com/yonarev/fdsw-github
+
+        ƒ Haz clic en la opción code.
+
+            Descarga el proyecto utilizando git clone.
+
+            Selecciona la opción ssh.
+
+                La opción https ya no funciona en github.
+
+        ƒ Copia la dirección.
+            git@github.com:yonarev/fdsw-github.git
+
+        ƒ En el terminal ingresa a tu carpeta de proyectos con cd proyectos.
+
+            Si no tienes puedes crear una con mkdir proyectos.
+                    jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES-latam (main)
+                    $ mkdir proyectos
+
+                    jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES-latam (main)
+                    $ CD proyectos/
+                    bash: CD: command not found
+
+                    jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES-latam (main)
+                    $ cd proyectos/
+
+                    jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES-latam/proyectos (main)
+                    $ pwd
+                    /c/Users/notebook/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES-latam/proyectos
+
+                    jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES-latam/proyectos (main)
+                    $
+
+        ƒ Descarga el proyecto utilizando git clone dirección_copiada cv2.
+
+            git clone git@github.com:yonarev/fdsw-github.git
+
+            PROBLEMAS 
+                Abrir el Firewall de Windows Defender:
+
+                Ve a Inicio > Configuración > Actualización y seguridad > Windows Security > Firewall y protección de red.
+                Permitir una aplicación a través del Firewall:
+
+                Haz clic en "Permitir una aplicación a través del Firewall".
+                Busca el cliente Git en la lista de aplicaciones. Si no lo encuentras, haz clic en "Permitir otra aplicación" y busca el ejecutable de Git (generalmente en C:\Program Files\Git\bin\git.exe).
+                Configurar las reglas:
+
+                Una vez que hayas seleccionado la aplicación de Git, asegúrate de marcar las casillas tanto para "Redes domésticas" como para "Redes públicas". Esto permitirá que Git se conecte a través de cualquier tipo de red.
+                Importante: Asegúrate de marcar la opción "Permitir conexión saliente". Esta es la clave para permitir que Git inicie conexiones hacia el servidor de GitHub.
+
+                RESUELTO DESPUES DEL REINICIO
+
         <Un proyecto clonado viene con la carpeta .git incluida, no se requiere hacer git init>
         
-        Carga la carpeta cv2 descargada en el editor de código.
-        Cambia el header utilizando el editor de código.
-        Agrega los cambios utilizando git add nombre_archivo
-        Confirma los cambios utilizando git commit -m "primeros cambios"
-        Sube los cambios utilizando git push origin main.
-        Revisa en github que los cambios se hayan subido haciendo clic en el archivo modificado.
-        La fecha del último commit es también un buen indicador. 
+        ? Carga la carpeta cv2 descargada en el editor de código.
 
+        ƒ Cambia el header utilizando el editor de código.
+            editando archivo index.html
+                <h1 class="display-1 fw-bold my-5">
+                    Estas son las Comidas del fin <br> del mundo
+                </h1>
+        ƒ Agrega los cambios utilizando git add nombre_archivo
+
+                git add index.html
+                    jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES-latam/proyectos/fdsw-github (main)
+                    $ git add index.html
+
+        ƒ Confirma los cambios utilizando 
+            git commit -m "primeros cambios"
+                jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES-latam/proyectos/fdsw-github (main)
+                $ git commit -m "primeros cambios"
+                [main 2d79fd8] primeros cambios
+                1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+        ƒ Sube los cambios utilizando 
+            git push origin main
+                jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES-latam/proyectos/fdsw-github (main)
+                $ git push origin main
+                Enter passphrase for key '/c/Users/notebook/.ssh/id_rsa':
+                Enumerating objects: 5, done.
+                Counting objects: 100% (5/5), done.
+                Delta compression using up to 2 threads
+                Compressing objects: 100% (3/3), done.
+                Writing objects: 100% (3/3), 307 bytes | 0 bytes/s, done.
+                Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+                remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+                To github.com:yonarev/fdsw-github.git
+                3d37991..2d79fd8  main -> main
+
+
+        ƒ Revisa en github que los cambios se hayan subido haciendo clic en el archivo modificado.
+            fdsw-github Public
+            Forked from gsanchezd/fdsw-github
+            FORK de jorge vera videla NIk: yonarev
+            HTML Updated 1 minute ago
+
+            primeros cambios
+            yonarevpushed 1 commit • 3d37991…2d79fd8 • 2 minutes ago
+
+        ƒ La fecha del último commit es también un buen indicador. 
+            jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES-latam/proyectos/fdsw-github (main)
+            $ git log
+            commit 2d79fd8513d87afd79782d2fcbcd76119d5428a1 (HEAD -> main, origin/main, origin/HEAD)
+            Author: yonarev <jorgeveravidela@gmail.com>
+            Date:   Sat Oct 12 10:34:34 2024 -0300
+
+                primeros cambios
+
+            commit 3d379911ae92925bc23916760f25faf7c5fe138e
+            Merge: dc32f74 2591bd4
+            Author: Gonzalo Sánchez <gonzalo.sanchez.d@gmail.com>
+            Date:   Mon Dec 6 13:37:46 2021 -0300
+
+                Merge branch 'main' of github.com:gsanchezd/fdsw-github
+
+            commit dc32f74e427cd359c02d99c9de4133cd5a3dabcd
+            Author: Gonzalo Sánchez <gonzalo.sanchez.d@gmail.com>
+            Date:   Mon Dec 6 13:37:32 2021 -0300
+
+                first commit
+
+            commit 2591bd4b97c96c2c9fce6fb1868028ed0d5bc0b8
+            Author: Gonzalo Sánchez D <gonzalo.sanchez.d@gmail.com>
+            Date:   Sun Dec 5 19:04:53 2021 -0300
+
+                Update README.md
+
+            commit 604b207689c99a2fc47948068272959b8e240eba
+            Author: Gonzalo Sánchez <gonzalo.sanchez.d@gmail.com>
+            Date:   Sun Dec 5 18:34:01 2021 -0300
+
+                first commit
+
+            jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES-latam/proyectos/fdsw-github (main)
+            $ git status
+            On branch main
+            Your branch is up to date with 'origin/main'.
+
+            nothing to commit, working tree clean
+
+        Requerimientos
+            ƒ 1. Hacer un fork del repositorio https://github.com/gsanchezd/fdsw-github y clonar el
+            repositorio a nuestro computador.
+            ƒ 2. Modificar el proyecto clonado agregando tus datos.
+            3. Hacer por lo menos 5 commits con modificaciones al repositorio forkeado.
+                    1er commit
+                        arriba
+                    2do commit 
+                        cambio 
+                            <html lang="es">
+                            <title>Jorge Vera Videla</title>    
+
+                        git add index.html
+                        git commit -m "primeros cambios-Cambie el titulo de la página y <html lang="es">"
+                    3er commit 
+                        cambio 
+                             <p class="my-5">
+                                La situación alimentaria mundial es compleja
+                                y presenta desafíos significativos. 
+                                A pesar de los avances en la producción agrícola,
+                                millones de personas en todo el mundo aún enfrentan inseguridad alimentaria.
+                            </p>
+                        git add index.html
+                        git commit -m "primeros cambios-Cambie el parrafo principal"
+                            jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES-latam/proyectos/fdsw-github (main)
+                            $ git add index.html
+
+                            jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES-latam/proyectos/fdsw-github (main)
+                            $                         git commit -m "primeros cambios-Cambie el parrafo principal"
+                            [main ca053e1] primeros cambios-Cambie el parrafo principal
+                            1 file changed, 4 insertions(+), 3 deletions(-)
+                    4to commit 
+                        cambio 
+                            <p class="card-text">
+                                Variaciones de las papas fritas:
+                                    Papas rústicas: 
+                                        Corta las papas en trozos grandes e irregulares y hornea con aceite, 
+                                        sal y tus especias favoritas (romero, tomillo, ajo).
+                                    Papas al horno con hierbas: 
+                                        Cubre las papas cortadas en rodajas con aceite, sal, pimienta, 
+                                        ajo en polvo y hierbas como romero y tomillo. 
+                                        Hornea hasta que estén doradas y crujientes.
+                            </p>
+
+                        git add index.html
+                        git commit -m "primeros cambios-Cambie el parrafo de las papas"
+                            jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES-latam/proyectos/fdsw-github (main)
+                            $ git add index.html
+
+                            jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES-latam/proyectos/fdsw-github (main)
+                            $  git commit -m "primeros cambios-Cambie el parrafo de las papas"
+                            [main c20fe58] primeros cambios-Cambie el parrafo de las papas
+                            1 file changed, 8 insertions(+), 4 deletions(-)
+                    5to commit 
+                        cambio
+                            <p class="card-text">
+                                El salmón de Alaska es más que un simple pez; 
+                                es un símbolo de fuerza, perseverancia y conexión con la naturaleza. 
+                                Su historia nos inspira a enfrentar nuestros propios desafíos con valentía 
+                                y determinación, recordándonos que incluso en los momentos más difíciles, 
+                                siempre hay una luz al final del túnel.
+                            </p>
+                        git add index.html
+                        git commit -m "primeros cambios-Cambie el parrafo de los salmones"
+
+                            jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES-latam/proyectos/fdsw-github (main)
+                            $ git add index.html
+
+                            jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES-latam/proyectos/fdsw-github (main)
+                            $ git commit -m "primeros cambios-Cambie el parrafo de los salmones"
+                            [main 376d27b] primeros cambios-Cambie el parrafo de los salmones
+                            1 file changed, 5 insertions(+), 4 deletions(-)
+
+                        SUBIENDO CAMBIOS AL REPOSITORIO
+                            git push origin main
+                                jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES-latam/proyectos/fdsw-github (main)
+                                $ git push origin main
+                                Enter passphrase for key '/c/Users/notebook/.ssh/id_rsa':
+                                Enter passphrase for key '/c/Users/notebook/.ssh/id_rsa':
+                                Enumerating objects: 14, done.
+                                Counting objects: 100% (14/14), done.
+                                Delta compression using up to 2 threads
+                                Compressing objects: 100% (12/12), done.
+                                Writing objects: 100% (12/12), 2.09 KiB | 714.00 KiB/s, done.
+                                Total 12 (delta 8), reused 0 (delta 0), pack-reused 0 (from 0)
+                                remote: Resolving deltas: 100% (8/8), completed with 2 local objects.
+                                To github.com:yonarev/fdsw-github.git
+                                2d79fd8..376d27b  main -> main
+                        
+                        REVISANDO LOS CAMBIOS 
+                            jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/GIT-HUB-BASES-latam/proyectos/fdsw-github (main)
+                            $ git log
+                            commit 376d27bb1406c81992485f8b2f0186658eb4f510 (HEAD -> main, origin/main, origin/HEAD)
+                            Author: yonarev <jorgeveravidela@gmail.com>
+                            Date:   Sat Oct 12 10:57:14 2024 -0300
+
+                                primeros cambios-Cambie el parrafo de los salmones
+
+                            commit c20fe58897122f0e1dfade362294e823157f966c
+                            Author: yonarev <jorgeveravidela@gmail.com>
+                            Date:   Sat Oct 12 10:54:19 2024 -0300
+
+                                primeros cambios-Cambie el parrafo de las papas
+
+                            commit ca053e1e432382aaaa010cabfd998c030f311a63
+                            Author: yonarev <jorgeveravidela@gmail.com>
+                            Date:   Sat Oct 12 10:49:44 2024 -0300
+
+                                primeros cambios-Cambie el parrafo principal
+
+                            commit 153db202e1fee895a3d6ffa85973db3dc7c80fe1
+                            Author: yonarev <jorgeveravidela@gmail.com>
+                            Date:   Sat Oct 12 10:45:39 2024 -0300
+
+                                primeros cambios-Cambie el titulo de la página y <html lang=es>
+
+                            commit 2d79fd8513d87afd79782d2fcbcd76119d5428a1
+                            Author: yonarev <jorgeveravidela@gmail.com>
+                            Date:   Sat Oct 12 10:34:34 2024 -0300
+
+                                primeros cambios
+
+                            commit 3d379911ae92925bc23916760f25faf7c5fe138e
+                            Merge: dc32f74 2591bd4
+                            Author: Gonzalo Sánchez <gonzalo.sanchez.d@gmail.com>
+                            Date:   Mon Dec 6 13:37:46 2021 -0300
+
+                                Merge branch 'main' of github.com:gsanchezd/fdsw-github
+
+                            commit dc32f74e427cd359c02d99c9de4133cd5a3dabcd
+                            Author: Gonzalo Sánchez <gonzalo.sanchez.d@gmail.com>
+                            Date:   Mon Dec 6 13:37:32 2021 -0300
+
+                                first commit
+
+                            commit 2591bd4b97c96c2c9fce6fb1868028ed0d5bc0b8
+                            Author: Gonzalo Sánchez D <gonzalo.sanchez.d@gmail.com>
+                            Date:   Sun Dec 5 19:04:53 2021 -0300
+
+                                Update README.md
+
+                            commit 604b207689c99a2fc47948068272959b8e240eba
+                            Author: Gonzalo Sánchez <gonzalo.sanchez.d@gmail.com>
+                            Date:   Sun Dec 5 18:34:01 2021 -0300
+
+                                first commit
+                            (END)
+                            
+            4. Compartir en el LMS el link a nuestro repositorio.
+            ¡Mucho éxito!
+                https://github.com/yonarev/fdsw-github/commits/main/
+
+            OJO     comparte tu logro no funciona 
+            ENVIO UN PULL REQUEST DESDE GITHUB
+                https://github.com/gsanchezd/fdsw-github/pull/151
+
+                DESAFIO 5 commits Jorge Vera V. #151
+                Open
+                yonarev wants to merge 5 commits into gsanchezd:main from yonarev:main 
+
+                
 Estados de un archivo en Git:
 
         El diagrama muestra cuatro estados principales por los que puede pasar un archivo en un repositorio Git:
@@ -784,6 +1096,51 @@ Estados de un archivo en Git:
                     y con esto vuelve a un estado no confirmado. 
                 b. Podemos ver el estado de los archivos con git status. 
                 c. Podemos ver todas las confirmaciones hechas con git log.
+
+fork 
+    ¿Qué es un fork en Git?
+
+        Imagina que tienes un libro favorito. 
+        Decides crear tu propia copia para poder hacer anotaciones, 
+        subrayar pasajes importantes o incluso reescribir algunas partes. 
+        Un fork en Git funciona de manera similar.
+
+        Un fork es una copia de un repositorio. Un repositorio, en términos simples, 
+        es un lugar donde se almacena todo el código de un proyecto. Al hacer un fork, 
+        estás creando una copia exacta de ese repositorio en tu propia cuenta.
+
+        Para qué sirve un fork?
+
+        Colaboración: 
+            Si quieres contribuir a un proyecto open-source, pero no tienes permisos 
+            para modificar el repositorio original, puedes crear un fork. 
+            Realizas tus cambios en tu copia, y luego puedes proponer que esos 
+            cambios se incorporen al proyecto original (a través de un pull request).
+
+        Experimentación: 
+            Un fork te permite experimentar con el código sin afectar el proyecto original. 
+            Puedes probar nuevas ideas, cometer errores y aprender sin preocuparte por 
+            romper el código de otros.
+        Proyectos personales: 
+            Puedes crear un fork de un proyecto existente como base para tu propio proyecto. 
+            Esto te ahorra tiempo y esfuerzo al no tener que empezar desde cero.
+        
+        Owner: Aquí se indica que el propietario del nuevo repositorio fork será tu cuenta personal (yonarev en este caso). Esto significa que tú tendrás todos los permisos sobre esta nueva copia.
+        Repository name: Este es el nombre que le darás a tu fork. Puedes mantener el mismo nombre que el original (fdsw-github) o personalizarlo para diferenciarlo.
+        Description (opcional): Puedes agregar una descripción para recordar el propósito de tu fork o cualquier otra información relevante.
+        Copy the main branch only: Esta opción indica que solo se copiará la rama principal (main) del repositorio original a tu fork. Si el proyecto original tiene múltiples ramas, puedes elegir copiar solo las que te interesen.
+        ¿Qué significa esto en la práctica?
+
+        Una vez que hagas clic en "Create fork", tendrás una copia exacta del repositorio original en tu cuenta. Podrás clonar este fork a tu computadora local, realizar cambios, crear nuevas ramas, y experimentar libremente sin afectar el proyecto original.
+
+        ¿Qué pasa si quieres contribuir con tus cambios al proyecto original?
+
+        Después de realizar tus modificaciones en tu fork, puedes crear una "pull request". Esto es como una solicitud para que los mantenedores del proyecto original revisen tus cambios y consideren incorporarlos a su repositorio.
+
+        En resumen:
+
+            Fork: Una copia de un repositorio que te permite trabajar de forma independiente.
+            Pull request: Una solicitud para que los cambios realizados en tu fork se incluyan en el repositorio original.
 
 Subiendo cambios con git push
     En la actividad anterior 
@@ -927,7 +1284,8 @@ EJECUTANDO GIT para el respaldo diario de este contenido
                 Primer commit: aprendiendo git
 
 PRUEBA Quiz - Terminal, Git y GitHub
-    De acuerdo a lo aprendido, ¿Cuál es el comando para listar los archivos NO ocultos que estén en un directorio?
+    De acuerdo a lo aprendido, 
+    ¿Cuál es el comando para listar los archivos NO ocultos que estén en un directorio?
 
         Seleccione solamente LA MEJOR respuesta
 
@@ -999,9 +1357,55 @@ PRUEBA Quiz - Terminal, Git y GitHub
 
 AQUI VAMOS 
     https://cursos.desafiolatam.com/courses/take/taller-git-github/downloads/48906601-desafio-github
-    Desafío - GitHub.pdf
+        Desafío - GitHub.pdf
 
 EJECUTANDO GIT para el respaldo diario de este contenido 
     git add .
     git commit -m "7to commit"
+    git push -u origin main
+        ok
+Utilizando servicios de GitHub Pages //como portafolio para sitios estaticos
+    Entorno estático: 
+        GitHub Pages proporciona un entorno de alojamiento simple y estático. 
+        No incluye un servidor web con soporte para lenguajes de programación 
+        del lado del servidor como PHP.
+        https://cursos.desafiolatam.com/courses/take/taller-git-github/lessons/48906602-utilizando-servicios-de-github-pages
+EJECUTANDO GIT para el respaldo diario de este contenido 
+    git add .
+        PROBLEMA 
+            Advertencia: 
+            Git te está advirtiendo que si agregas el directorio 
+            proyectos/fdsw-github como un submódulo, 
+            los clones del repositorio principal 
+            no contendrán el contenido del submódulo y no sabrán cómo obtenerlo.
+                ¿Qué hacer?
+
+                Si realmente deseas agregar el directorio como un submódulo, sigue la recomendación de Git:
+
+                Agrega el submódulo:
+                    git submodule add <url> proyectos/fdsw-github
+                Confirma los cambios:
+                    git commit -m "Agregando submódulo fdsw-github"
+            ¿Qué pasa si no quieres agregar un submódulo?
+                Si agregaste el directorio por error, puedes eliminarlo del índice de Git:
+                    
+                    git rm --cached proyectos/fdsw-github
+
+                    git rm --cached proyectos/fdsw-github:
+                    git rm: Este comando se utiliza para eliminar archivos del seguimiento de Git.
+                    --cached: Este flag indica que solo deseas eliminar el archivo del índice 
+                    de Git (área de preparación), pero no del sistema de archivos. 
+                    Esto significa que el archivo seguirá existiendo en tu computadora, 
+                    pero Git ya no lo considerará parte del proyecto.
+
+                    Forzar la eliminación:
+                        Si estás seguro de que deseas eliminar el archivo del índice 
+                        de Git sin conservar los cambios, puedes usar la opción -f:
+
+                        git rm -f proyectos/fdsw-github
+            RESUELTO 
+                moviendo carpeta proyectos/ a GIT-HUB-BASES-latam-ejercicios/
+
+    git add .
+    git commit -m "8vo commit"
     git push -u origin main
