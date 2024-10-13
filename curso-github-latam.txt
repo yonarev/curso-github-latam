@@ -340,6 +340,14 @@ Generando la clave SSH
 
                 Este comando inicia el agente SSH en segundo plano y configura tu shell para que lo utilice. De esta manera, cuando ejecutes comandos SSH, el agente buscará las claves SSH almacenadas en la memoria en lugar de pedirte la frase de contraseña cada vez.
 
+al comenzar con git hub 
+    ------------- ESTO ES AL COMIENZO -------------
+    ssh-keygen -t rsa -b 4096 -C "creacion claves pp"
+    eval "$(ssh-agent -s)"
+    git config --global user.name "yonarev"
+    git config --global user.email jorgeveravidela@gmail.com
+    git config --list
+
 USANDO GIT 
     SOLO UNA VEZ
         git config --global user.name "yonarev"
@@ -459,7 +467,6 @@ USANDO GIT
                 En la pestaña "General", asegúrate de que el 
                 "Tipo de inicio" esté configurado en "Automático".
                 Haz clic en "Iniciar" para iniciar el servicio.
-
             CMD 
                 Start-Service ssh-agent
             RESUELTO 
@@ -1501,4 +1508,8 @@ CERTIFICADO
 ULTIMO BCKP EN GIT
     git add .
     git commit -m "Ultimo commit"
+    git push -u origin main
+Actualizacion 
+    git add .
+    git commit -m "Actualizando
     git push -u origin main
